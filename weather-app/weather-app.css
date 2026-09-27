@@ -1,0 +1,230 @@
+/* ------------------------------
+   Reset
+------------------------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ------------------------------
+   Body
+------------------------------ */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    min-height: 100vh;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #4facfe 0%,
+            #00f2fe 100%
+        );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+
+/* ------------------------------
+   App
+------------------------------ */
+
+.app-wrap {
+    width: 100%;
+    max-width: 500px;
+
+    min-height: 600px;
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    box-shadow:
+        0 25px 50px rgba(0, 0, 0, 0.2);
+
+    backdrop-filter: blur(15px);
+}
+
+
+/* ------------------------------
+   Search
+------------------------------ */
+
+header {
+    margin-bottom: 50px;
+}
+
+.search-box {
+    width: 100%;
+
+    padding: 16px 20px;
+
+    border: none;
+    outline: none;
+
+    border-radius: 15px;
+
+    font-size: 17px;
+
+    color: #333;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.1);
+
+    transition: 0.3s ease;
+}
+
+.search-box::placeholder {
+    color: #888;
+}
+
+.search-box:focus {
+    background: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ------------------------------
+   Location
+------------------------------ */
+
+.location {
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+.city {
+    font-size: 32px;
+
+    font-weight: 700;
+
+    margin-bottom: 12px;
+
+    text-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.date {
+    font-size: 16px;
+
+    opacity: 0.85;
+}
+
+
+/* ------------------------------
+   Current Weather
+------------------------------ */
+
+.current {
+    text-align: center;
+}
+
+.temp {
+    font-size: 100px;
+
+    font-weight: 800;
+
+    line-height: 1;
+
+    text-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.temp span {
+    font-size: 40px;
+
+    font-weight: 400;
+
+    vertical-align: top;
+
+    margin-left: 5px;
+}
+
+
+.weather {
+    font-size: 28px;
+
+    font-weight: 600;
+
+    margin-top: 35px;
+
+    text-transform: capitalize;
+}
+
+
+.hi-low {
+    font-size: 20px;
+
+    margin-top: 15px;
+
+    opacity: 0.85;
+}
+
+
+/* ------------------------------
+   Mobile
+------------------------------ */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .app-wrap {
+        min-height: 550px;
+
+        padding: 25px 20px;
+
+        border-radius: 20px;
+    }
+
+    header {
+        margin-bottom: 40px;
+    }
+
+    .city {
+        font-size: 26px;
+    }
+
+    .date {
+        font-size: 14px;
+    }
+
+    .temp {
+        font-size: 75px;
+    }
+
+    .temp span {
+        font-size: 30px;
+    }
+
+    .weather {
+        font-size: 24px;
+    }
+
+    .hi-low {
+        font-size: 18px;
+    }
+}
