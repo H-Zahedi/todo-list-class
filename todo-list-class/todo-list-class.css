@@ -1,119 +1,165 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
+    margin: 0;
+    padding: 24px 16px;
     background-color: rgb(57, 70, 101);
+    font-family: Tahoma, Arial, sans-serif;
+    color: rgb(235, 235, 235);
 }
 
 .container {
-    margin-top: 90px;
+    width: 100%;
+    max-width: 340px;
+    margin: 66px auto 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .list-group {
-    /* border: 1px solid red; */
     width: 100%;
-    border-radius: 4px;
-    background-color: rgba(66, 48, 112, 0.753);
-    max-width: 300px;
     padding: 0;
     margin: 0;
-    list-style-type: none;
-    /* text-align: right; */
+    list-style: none;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: rgba(66, 48, 112, 0.753);
 }
 
 .list-group li {
-    /* border: 1px solid rgb(77, 77, 77); */
-    border-bottom: 1px solid rgb(55, 55, 55);
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    color: rgb(235, 235, 235);
-    padding: 15px;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 12px;
+    border-bottom: 1px solid rgb(75, 75, 85);
 }
 
-.list-group li span {
+.list-group li:last-child {
+    border-bottom: none;
+}
+
+.list-group li label {
+    flex: 1;
+    min-width: 80px;
     overflow-wrap: anywhere;
-    cursor: pointer;
+    line-height: 1.6;
 }
 
-.completed {
+.todo-completed {
     text-decoration: line-through;
     opacity: 0.6;
 }
 
 .add {
-    /* border: 1px solid red; */
-    margin-top: 19px;
     width: 100%;
-    max-width: 322px;
-    color: rgb(231, 229, 229);
-    font-size: 17px;
-    font-weight: 500;
+    margin-top: 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 12px;
+    font-size: 16px;
 }
 
 .add label {
-    margin-bottom: 10px;
+    margin-bottom: 2px;
+    text-align: center;
 }
 
 .add input {
-    /* border: 1px solid red; */
-    box-sizing: border-box;
-    width: 90%;
-    padding: 8px;
-    border: none;
+    width: 100%;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid transparent;
     outline: none;
     background-color: rgb(39, 41, 65);
-    max-width: 300px;
-    min-width: 100px;
     color: white;
-    height: 38px;
     border-radius: 5px;
+    font: inherit;
 }
 
 .add input::placeholder {
-    color: rgb(190, 190, 200);
+    color: #b8b8c5;
 }
 
-.add-btn,
-.clear-btn,
-.delete-btn {
-    padding: 8px 14px;
+.add input:focus {
+    border-color: #b7a5ff;
+}
+
+button {
+    padding: 8px 12px;
     border: none;
     border-radius: 5px;
-    color: white;
     cursor: pointer;
+    font: inherit;
+    font-size: 13px;
+    transition: background-color 0.2s, opacity 0.2s;
 }
 
-.add-btn {
-    margin-top: 12px;
-    background-color: rgb(39, 41, 65);
+button:hover {
+    opacity: 0.85;
 }
 
-.add-btn:hover {
-    background-color: rgb(66, 48, 112);
+button:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 2px;
 }
 
-.clear-btn {
-    margin-top: 15px;
-    background-color: #b83b4b;
+.list-group li button:first-of-type {
+    background-color: #4caf50;
+    color: white;
 }
 
-.delete-btn {
-    background-color: #b83b4b;
-    flex-shrink: 0;
+.list-group li button:last-of-type {
+    background-color: #d9534f;
+    color: white;
 }
 
-.clear-btn:hover,
-.delete-btn:hover {
-    background-color: #922b38;
+.list-group li button.todo-completed {
+    text-decoration: line-through;
+    opacity: 0.7;
 }
 
-@media (max-width: 350px) {
-    .add input {
-        min-width: 0;
+#addButton {
+    width: 100%;
+    padding: 10px;
+    background-color: #5c9e70;
+    color: white;
+}
+
+#addButton:hover {
+    background-color: #47865a;
+}
+
+#clearButton {
+    width: 100%;
+    padding: 10px;
+    background-color: #a84650;
+    color: white;
+}
+
+#clearButton:hover {
+    background-color: #8e3540;
+}
+
+@media (max-width: 360px) {
+    body {
+        padding: 16px 12px;
+    }
+
+    .container {
+        margin-top: 32px;
+    }
+
+    .list-group li {
+        padding: 10px;
+        gap: 6px;
+    }
+
+    .list-group li button {
+        padding: 7px 9px;
     }
 }
