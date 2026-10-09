@@ -1,0 +1,119 @@
+body {
+    background-color: rgb(57, 70, 101);
+}
+
+.container {
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list-group {
+    /* border: 1px solid red; */
+    width: 100%;
+    border-radius: 4px;
+    background-color: rgba(66, 48, 112, 0.753);
+    max-width: 300px;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    /* text-align: right; */
+}
+
+.list-group li {
+    /* border: 1px solid rgb(77, 77, 77); */
+    border-bottom: 1px solid rgb(55, 55, 55);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    color: rgb(235, 235, 235);
+    padding: 15px;
+}
+
+.list-group li span {
+    overflow-wrap: anywhere;
+    cursor: pointer;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.add {
+    /* border: 1px solid red; */
+    margin-top: 19px;
+    width: 100%;
+    max-width: 322px;
+    color: rgb(231, 229, 229);
+    font-size: 17px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add label {
+    margin-bottom: 10px;
+}
+
+.add input {
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    width: 90%;
+    padding: 8px;
+    border: none;
+    outline: none;
+    background-color: rgb(39, 41, 65);
+    max-width: 300px;
+    min-width: 100px;
+    color: white;
+    height: 38px;
+    border-radius: 5px;
+}
+
+.add input::placeholder {
+    color: rgb(190, 190, 200);
+}
+
+.add-btn,
+.clear-btn,
+.delete-btn {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.add-btn {
+    margin-top: 12px;
+    background-color: rgb(39, 41, 65);
+}
+
+.add-btn:hover {
+    background-color: rgb(66, 48, 112);
+}
+
+.clear-btn {
+    margin-top: 15px;
+    background-color: #b83b4b;
+}
+
+.delete-btn {
+    background-color: #b83b4b;
+    flex-shrink: 0;
+}
+
+.clear-btn:hover,
+.delete-btn:hover {
+    background-color: #922b38;
+}
+
+@media (max-width: 350px) {
+    .add input {
+        min-width: 0;
+    }
+}
